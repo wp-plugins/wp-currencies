@@ -24,7 +24,7 @@ class WP_Currencies {
 	 *
 	 * @var		string
 	 */
-	const VERSION = '1.2.0';
+	const VERSION = '1.2.2';
 
 	/**
 	 * Plugin unique identifier, also used for textdomain
@@ -131,42 +131,6 @@ class WP_Currencies {
 		}
 
 		return self::$instance;
-
-	}
-
-	/**
-	 * Fired upon plugin activation.
-	 *
-	 * @since    1.0.0
-	 */
-	private static function activate() {
-
-		global $wpdb;
-		$table_name = $wpdb->prefix . 'currencies';
-
-		// creates a database table to store and update currencies later
-		$sql = "CREATE TABLE $table_name (
-			currency_code VARCHAR(3) CHARACTER SET UTF8 NOT NULL,
-			currency_rate FLOAT NOT NULL,
-			currency_data VARCHAR(5000) CHARACTER SET UTF8 NOT NULL,
-			timestamp TIMESTAMP DEFAULT 0 ON UPDATE CURRENT_TIMESTAMP,
-			UNIQUE KEY currency_code (currency_code)
-		);";
-
-		require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
-		dbDelta( $sql );
-
-	}
-
-	/**
-	 * Fired upon plugin deactivation.
-	 *
-	 * @since    1.0.0
-	 */
-	private static function deactivate() {
-
-		// Clear WP Currencies wp_cron schedule
-		wp_clear_scheduled_hook( 'wp_currencies_update' );
 
 	}
 
