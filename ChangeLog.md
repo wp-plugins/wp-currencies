@@ -1,3 +1,13 @@
+### 1.2.4 (26 feb 2015)
+* Fixes "The plugin generated ... characters of unexpected output" upon activation
+
+### 1.2.2 (06 feb 2015)
+* Fixes a bug where the currencies table is not created in database upon plugin activation
+* If you were experiencing issues with previous version, you may want to deactivate and reactivate plugin after update
+
+### 1.2.1 (06 feb 2015)
+* Fixes broken link to plugin settings page (props @jkomar)
+
 ### 1.2.0 (15 Jan 2015)
 * Added support to WooCommerce MultiLanguage
 * Updated Settings Page (you may need to re-enter your API Key)

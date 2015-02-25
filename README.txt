@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/uk/cgi-bin/webscr?cmd=_flow&SESSION=SUJDJhsq
 Tags: currency, currencies
 Requires at least: 3.6.0
 Tested up to: 4.1.0
-Stable tag: 1.2.2
+Stable tag: 1.2.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -149,6 +149,9 @@ Please note that if you make use of the API elsewhere and perform more requests,
 
 
 == Changelog ==
+
+= 1.2.4 =
+* Fixes "The plugin generated ... characters of unexpected output" upon activation
 
 = 1.2.2 =
 * Fixes missing database table creation on plugin activation (you may want to deactivate and reactivate plugin after upgrade if were experiencing issues)
