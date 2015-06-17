@@ -2,18 +2,17 @@
 /**
  * WP Currencies API
  *
- * @package   WP Currencies
- * @author    nekojira <fulvio@nekojira.com>
- * @license   GPL-2.0+
- * @link      https://github.com/nekojira/wp-currencies/
- * @copyright 2014 nekojira
+ * Support for WordPress JSON REST API.
  */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly
+}
 
 /**
  * WP Currencies API class
  *
- * @package WP Currencies
- * @author  nekojira <fulvio@nekojira.com>
+ * @package WP_Currencies
  */
 class WP_Currencies_API {
 
@@ -25,15 +24,6 @@ class WP_Currencies_API {
 	 * @var  	object
 	 */
 	protected static $instance = null;
-
-	/**
-	 * Initialize
-	 *
-	 * @since 1.1.0
-	 */
-	public function __construct() {
-
-	}
 
 	/**
 	 * Return an instance of this class.
@@ -51,7 +41,6 @@ class WP_Currencies_API {
 
 		return self::$instance;
 	}
-
 
 	/**
 	 * Register JSON API routes
@@ -81,14 +70,16 @@ class WP_Currencies_API {
 	/**
 	 * Get currency data API callback function
 	 *
-	 * @since 1.1.0
+	 * @since   1.1.0
 	 *
 	 * @return 	array	currency data
 	 */
 	public function api_get_currencies() {
 
 		$currencies = get_currencies();
+
 		return $currencies;
+
 	}
 
 	/**
@@ -96,14 +87,16 @@ class WP_Currencies_API {
 	 *
 	 * @param	string	$currency	(optional) base currency, default US Dollars
 	 *
-	 * @since 1.1.0
+	 * @since   1.1.0
 	 *
 	 * @return 	array	currency rates
 	 */
 	public function api_get_rates( $currency = 'USD' ) {
 
 		$rates = get_exchange_rates( $currency );
+
 		return $rates;
+
 	}
 
 }
