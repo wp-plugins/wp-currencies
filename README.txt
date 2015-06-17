@@ -15,17 +15,17 @@ Currency data and updated currency exchange rates for WordPress.
 
 WP Currencies is a WordPress plugin that helps you fetch currency data from http://www.openexchangerates.org/.
 
-The currencies and their exchange rates will be periodically updated at intervals that can be set in WordPress dashboard settings by a WordPress administrator.
+The currencies and their exchange rates will be periodically updated at intervals that can be set from the WordPress dashboard by an administrator.
 
-The plugin is intended for developers that want to access currencies data and currency exchange rates from within WordPress for different purposes. The plugin comes with a set of functions to retrieve currency data and exchange rates as PHP arrays or json objects in ajax calls.
+This plugin is intended mainly for developers who want to access currencies data and currency exchange rates from within WordPress, for different purposes. The plugin comes with a set of handy functions to retrieve currency data and currency exchange rates as PHP arrays or json objects in ajax calls.
 
-Furthermore, it extends the [JSON REST WP API]( https://wordpress.org/plugins/json-rest-api/) with new routes, and, if you use [Advanced Custom Fields](https://wordpress.org/plugins/advanced-custom-fields/), WP Currencies will also add a new "Currency" field.
+It also extends the [JSON REST WP API]( https://wordpress.org/plugins/json-rest-api/) with new routes, and, if you use [Advanced Custom Fields](https://wordpress.org/plugins/advanced-custom-fields/), WP Currencies will also add a new "Currency" field.
 
-If you use [WPML](http://wpml.org/) and have both [WooCommerce](https://wordpress.org/plugins/woocommerce/) and [WooCommerce MultiLingual](https://wordpress.org/plugins/woocommerce-multilingual/) installed, you can use this plugin to filter WCML currency rate using [one of their hooks](https://wpml.org/documentation/related-projects/woocommerce-multilingual/multi-currency-support-woocommerce/) and update rates on the fly.
+Furthermore, if you use [WPML](http://wpml.org/) and have both [WooCommerce](https://wordpress.org/plugins/woocommerce/) and [WooCommerce MultiLingual](https://wordpress.org/plugins/woocommerce-multilingual/) installed, you can use this plugin to filter WCML currency rate using [one of their hooks](https://wpml.org/documentation/related-projects/woocommerce-multilingual/multi-currency-support-woocommerce/) and update rates on the fly. If you use other shopping carts or payment forms, this plugin can become handy too with little effort.
 
 **Important** - You will need an API key from http://www.openexchangerates.org/ to pull currency data and have this plugin work properly (either choose the forever free plan or one of their premium subscriptions).
 
-To contribute with bug reports or submit pull requests, please refer to [WP Currencies repository on Github](https://github.com/nekojira/wp-currencies), thank you.
+To contribute with bug reports or submit pull requests, please refer to [WP Currencies repository on Github](https://github.com/nekojira/wp-currencies), where you will find also the complete documentation for this plugin. Thank you.
 
 
 == Installation ==
