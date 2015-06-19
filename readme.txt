@@ -1,7 +1,7 @@
 === WP Currencies ===
 Contributors: nekojira
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=P64V9NTEYFKDL
-Tags: currency, currencies, exchange-rates, finance, ecommerce, woocommerce, wcml, acf, advanced-custom-fields 
+Tags: currency, currencies, exchange-rates, finance, ecommerce, woocommerce, wcml, acf, advanced-custom-fields
 Requires at least: 4.0.0
 Tested up to: 4.2.2
 Stable tag: 1.4.0
@@ -15,13 +15,13 @@ Currency data and updated currency exchange rates for WordPress.
 
 WP Currencies uses [openexchangerates.org](http://www.openexchangerates.org/) to pull currency data and currency exchange rates in WordPress.
 
-The currencies and their exchange rates will be periodically updated at intervas set from the WordPress dashboard by an administrator.
+The currencies and their exchange rates will be periodically updated at intervals set from the WordPress dashboard by an administrator.
 
-The plugin is intended for developers that want to access currencies data and currency exchange rates from within WordPress and perform basic currency rates conversions. WP Currencies comes with a functions library to retrieve currency data and exchange rates as PHP arrays or json objects in ajax calls. 
+The plugin is intended for developers that want to access currencies data and currency exchange rates from within WordPress and perform basic currency rates conversions. WP Currencies comes with a functions library to retrieve currency data and exchange rates as PHP arrays or json objects in ajax calls.
 
 Furthermore, it extends [JSON REST WP API]( https://wordpress.org/plugins/json-rest-api/) with new routes, and, if you use [Advanced Custom Fields](https://wordpress.org/plugins/advanced-custom-fields/) (ACF), WP Currencies will also add a new "Currency" field for use in ACF.
 
-If you use [WPML](http://wpml.org/) and have both [WooCommerce](https://wordpress.org/plugins/woocommerce/) and [WooCommerce MultiLingual] (https://wordpress.org/plugins/woocommerce-multilingual/) installed, you can use this plugin to filter WCML currency rate using [one of their hooks](https://wpml.org/documentation/related-projects/woocommerce-multilingual/multi-currency-support-woocommerce/) and update rates on the fly.
+If you use [WPML](http://wpml.org/) and have both [WooCommerce](https://wordpress.org/plugins/woocommerce/) and [WooCommerce MultiLingual](https://wordpress.org/plugins/woocommerce-multilingual/) installed, you can use this plugin to filter WCML currency rate using [one of their hooks](https://wpml.org/documentation/related-projects/woocommerce-multilingual/multi-currency-support-woocommerce/) and update rates on the fly.
 
 **Important** - You will need an API key from http://www.openexchangerates.org/ to pull currency data and make this plugin work properly (either choose the forever free plan or one of their premium subscriptions).
 
@@ -65,7 +65,7 @@ Install as you would do with any other WordPress plugin to get started.
 After installation, navigate to `Currencies` settings page in the `Settings` admin menu in your WordPress admin dashboard.
 From here, enter your Open Exchange Rates API key - get yours at [http://www.openexchangerates.org/](http://www.openexchangerates.org/) and hit the `Save Changes` button.
 
-You may as well specify a different update frequency of your currency exchange rates. 
+You may as well specify a different update frequency of your currency exchange rates.
 
 
 == Functions ==
@@ -76,7 +76,7 @@ For the full documentation, please refer to the [WP Currencies wiki on Github](h
 
 = I've installed the plugin but I don't see anything! =
 
-Please read again the plugin description and read the [documentation](https://github.com/nekojira/wp-currencies/wiki). 
+Please read again the plugin description and read the [documentation](https://github.com/nekojira/wp-currencies/wiki).
 WP Currencies by this time doesn't offer any WYSIWYG functionality, but it's intended for developers who want to build solutions using currency data and exchange rates - which this plugin provides with an API for using those in WordPress.
 
 = Is this plugin created or endorsed by Open Exchange Rates? =
@@ -107,7 +107,7 @@ This could be related to `cron` not working properly in your host. Please refer 
 
 == Changelog ==
 
-= 1.4.0 = 
+= 1.4.0 =
 * Better OOP rewrite of the whole plugin
 * PHP 5.4 is the minimum requirement now
 * Improved security and performance
