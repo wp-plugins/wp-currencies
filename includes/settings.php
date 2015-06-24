@@ -210,20 +210,29 @@ class Settings {
 	 * @param string $new_value
 	 */
 	public function updated_options( $option, $old_value, $new_value ) {
-		// Are we on the right option?
+
+		// Are we on the right option? Is there an update?
 		if ( $option == 'wp_currencies_settings' ) {
-			// Set new schedule.
-			if ( isset( $new_value['update_interval'] ) || isset( $new_value['api_key'] ) ) {
-				if ( ! empty( $new_value['update_interval'] ) || ! empty( $old_value['update_interval'] ) ) {
+			if ( $old_value != $new_value ) {
+
+				// Makes sure we have an API key (won't tell if valid, but at least is not empty).
+				$api_key = isset( $new_value['api_key'] ) ? $new_value['api_key'] : ( isset( $old_value['api_key'] ) ? $old_value['api_key'] : '' );
+				if ( ! empty( $api_key ) ) {
+
+					wp_clear_scheduled_hook( 'wp_currencies_update' );
+
 					// Has this ever been scheduled before?
 					if ( ! wp_next_scheduled( 'wp_currencies_update' ) ) {
 						wp_schedule_event( time(), $new_value['update_interval'], 'wp_currencies_update' );
 					} else {
 						wp_reschedule_event( time(), $new_value['update_interval'], 'wp_currencies_update' );
 					}
+
 				}
+
 			}
 		}
+
 	}
 
 }
