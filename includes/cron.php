@@ -39,8 +39,11 @@ class Cron {
 	 * @since 1.4.0
 	 */
 	public function update_currencies() {
-		$rates = new Rates();
-		$rates->update();
+		if ( defined( 'DOING_CRON' ) ) {
+			do_action( 'wp_currencies_before_update', time() );
+			$rates = new Rates();
+			$rates->update();
+		}
 	}
 
 	/**
