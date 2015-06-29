@@ -1,3 +1,18 @@
+#### 1.4.6 (29 jun 2015)
+* Further improvements in handling wp cron and scheduled events hooks
+* Commented out 'DOING_CRON' check (might not work if using alternate cron or with some object caching)
+* Introduced `wp_currencies_update()` function
+
+#### 1.4.4 (26 jun 2015)
+* Removed deprecated code in ACF 5.x support that was triggering an error
+
+#### 1.4.3 (26 jun 2015)
+* 'DOING_CRON' wrapper check added to wp cron callback action to prevent firing too many updates
+* Added new action hooks (see [documentation](https://github.com/nekojira/wp-currencies/wiki/Hooks))
+
+#### 1.4.1 (24 jun 2015)
+* Fixes a critical bug from 1.4.0 where too many currency update requests were fired - please update
+
 #### 1.4.0 (19 jun 2015)
 * Better OOP rewrite of the whole plugin
 * PHP 5.4 is the minimum requirement now
